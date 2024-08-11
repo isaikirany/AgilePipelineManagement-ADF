@@ -1,0 +1,9 @@
+{
+	"name": "agiledatapipeline",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9e5a26ac-3fa3-4931-8c35-0cd9ae41e5a9",
+		"tenantId": "97cab7c0-265d-483d-8770-f3d4c7c96e5e"
+	}
+}
