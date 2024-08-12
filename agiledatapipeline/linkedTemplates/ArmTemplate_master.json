@@ -19,6 +19,18 @@
 			"type": "string",
 			"defaultValue": "https://AgileDPM-KV.vault.azure.net/"
 		},
+		"trigger1_properties_pipeline1_parameters_filename": {
+			"type": "string",
+			"defaultValue": "@triggerBody().filename"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/52efa27a-9aeb-4c5c-8aa2-089ad55f2f1a/resourceGroups/agiledatamanagement/providers/Microsoft.Storage/storageAccounts/agiledmstrg"
+		},
+		"AzureDatabricks1_ls_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0812-133451-7cnz2ihz"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -54,6 +66,15 @@
 					},
 					"AzureKeyVault1_ls_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault1_ls_properties_typeProperties_baseUrl')]"
+					},
+					"AzureDatabricks1_ls_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks1_ls_properties_typeProperties_existingClusterId')]"
+					},
+					"trigger1_properties_pipeline1_parameters_filename": {
+						"value": "[parameters('trigger1_properties_pipeline1_parameters_filename')]"
+					},
+					"trigger1_properties_typeProperties_scope": {
+						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
 					}
 				}
 			},

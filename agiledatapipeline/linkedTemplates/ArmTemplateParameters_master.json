@@ -14,6 +14,15 @@
 		"AzureKeyVault1_ls_properties_typeProperties_baseUrl": {
 			"value": "https://AgileDPM-KV.vault.azure.net/"
 		},
+		"trigger1_properties_pipeline1_parameters_filename": {
+			"value": "@triggerBody().filename"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/52efa27a-9aeb-4c5c-8aa2-089ad55f2f1a/resourceGroups/agiledatamanagement/providers/Microsoft.Storage/storageAccounts/agiledmstrg"
+		},
+		"AzureDatabricks1_ls_properties_typeProperties_existingClusterId": {
+			"value": "0812-133451-7cnz2ihz"
+		},
 		"containerUri": {
 			"value": ""
 		},
