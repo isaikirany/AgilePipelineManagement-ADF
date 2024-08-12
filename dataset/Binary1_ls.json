@@ -1,0 +1,32 @@
+{
+	"name": "Binary1_ls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1_ls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"param_container": {
+				"type": "string"
+			},
+			"param_folder": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().param_folder",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().param_container",
+					"type": "Expression"
+				}
+			}
+		}
+	}
+}
