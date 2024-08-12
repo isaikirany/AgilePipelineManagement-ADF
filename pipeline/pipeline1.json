@@ -16,10 +16,6 @@
 				"userProperties": [],
 				"typeProperties": {
 					"notebookPath": "/Shared/LendingClub_Intro"
-				},
-				"linkedServiceName": {
-					"referenceName": "AzureDatabricks1_ls",
-					"type": "LinkedServiceReference"
 				}
 			}
 		],
