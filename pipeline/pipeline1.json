@@ -15,10 +15,19 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Shared/LendingClub_Intro"
+					"notebookPath": "/Users/isaikirany@outlook.com/Agile Data Pipeline Management"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1_ls",
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
+		"parameters": {
+			"filename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
