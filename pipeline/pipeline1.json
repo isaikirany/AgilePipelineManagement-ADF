@@ -15,7 +15,13 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/isaikirany@outlook.com/Agile Data Pipeline Management"
+					"notebookPath": "/Users/isaikirany@outlook.com/Agile Data Pipeline Management",
+					"baseParameters": {
+						"filename": {
+							"value": "@pipeline().parameters.filename",
+							"type": "Expression"
+						}
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1_ls",
