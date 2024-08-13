@@ -11,25 +11,45 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1_ls'"
 		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
 		"AzureDataLakeStorage1_ls_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://agiledmstrg.dfs.core.windows.net/"
+		},
+		"AzureDatabricks1_ls_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0812-133451-7cnz2ihz"
 		},
 		"AzureKeyVault1_ls_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://AgileDPM-KV.vault.azure.net/"
 		},
-		"trigger1_properties_pipeline1_parameters_filename": {
+		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "@triggerBody().filename"
+			"defaultValue": "azuredpm.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "datapipeline"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Cloudpandith"
 		},
 		"trigger1_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/52efa27a-9aeb-4c5c-8aa2-089ad55f2f1a/resourceGroups/agiledatamanagement/providers/Microsoft.Storage/storageAccounts/agiledmstrg"
 		},
-		"AzureDatabricks1_ls_properties_typeProperties_existingClusterId": {
+		"event_trigger_properties_pipeline1_parameters_filename": {
 			"type": "string",
-			"defaultValue": "0812-133451-7cnz2ihz"
+			"defaultValue": "orders.csv"
+		},
+		"event_trigger_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/52efa27a-9aeb-4c5c-8aa2-089ad55f2f1a/resourceGroups/agiledatamanagement/providers/Microsoft.Storage/storageAccounts/agiledmstrg"
 		},
 		"containerUri": {
 			"type": "string",
@@ -61,20 +81,35 @@
 					"AzureDataLakeStorage1_ls_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_ls_accountKey')]"
 					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
 					"AzureDataLakeStorage1_ls_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_ls_properties_typeProperties_url')]"
 					},
 					"AzureKeyVault1_ls_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault1_ls_properties_typeProperties_baseUrl')]"
 					},
-					"AzureDatabricks1_ls_properties_typeProperties_existingClusterId": {
-						"value": "[parameters('AzureDatabricks1_ls_properties_typeProperties_existingClusterId')]"
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
 					},
-					"trigger1_properties_pipeline1_parameters_filename": {
-						"value": "[parameters('trigger1_properties_pipeline1_parameters_filename')]"
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
 					},
 					"trigger1_properties_typeProperties_scope": {
 						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
+					},
+					"AzureDatabricks1_ls_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks1_ls_properties_typeProperties_existingClusterId')]"
+					},
+					"event_trigger_properties_pipeline1_parameters_filename": {
+						"value": "[parameters('event_trigger_properties_pipeline1_parameters_filename')]"
+					},
+					"event_trigger_properties_typeProperties_scope": {
+						"value": "[parameters('event_trigger_properties_typeProperties_scope')]"
 					}
 				}
 			},

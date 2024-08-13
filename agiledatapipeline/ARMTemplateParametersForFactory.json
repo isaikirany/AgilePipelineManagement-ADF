@@ -8,20 +8,35 @@
 		"AzureDataLakeStorage1_ls_accountKey": {
 			"value": ""
 		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_ls_properties_typeProperties_url": {
 			"value": "https://agiledmstrg.dfs.core.windows.net/"
+		},
+		"AzureDatabricks1_ls_properties_typeProperties_existingClusterId": {
+			"value": "0812-133451-7cnz2ihz"
 		},
 		"AzureKeyVault1_ls_properties_typeProperties_baseUrl": {
 			"value": "https://AgileDPM-KV.vault.azure.net/"
 		},
-		"trigger1_properties_pipeline1_parameters_filename": {
-			"value": "@triggerBody().filename"
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "azuredpm.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "datapipeline"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "Cloudpandith"
 		},
 		"trigger1_properties_typeProperties_scope": {
 			"value": "/subscriptions/52efa27a-9aeb-4c5c-8aa2-089ad55f2f1a/resourceGroups/agiledatamanagement/providers/Microsoft.Storage/storageAccounts/agiledmstrg"
 		},
-		"AzureDatabricks1_ls_properties_typeProperties_existingClusterId": {
-			"value": "0812-133451-7cnz2ihz"
+		"event_trigger_properties_pipeline1_parameters_filename": {
+			"value": "orders.csv"
+		},
+		"event_trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/52efa27a-9aeb-4c5c-8aa2-089ad55f2f1a/resourceGroups/agiledatamanagement/providers/Microsoft.Storage/storageAccounts/agiledmstrg"
 		}
 	}
 }
