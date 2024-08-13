@@ -141,7 +141,8 @@
 		],
 		"parameters": {
 			"filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "orders.csv"
 			}
 		},
 		"annotations": []
