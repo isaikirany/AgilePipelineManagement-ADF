@@ -5,7 +5,14 @@
 			{
 				"name": "Notebook1",
 				"type": "DatabricksNotebook",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -42,32 +49,91 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "BinarySource",
+						"type": "JsonSource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true
 						},
 						"formatSettings": {
-							"type": "BinaryReadSettings"
+							"type": "JsonReadSettings"
 						}
 					},
 					"sink": {
-						"type": "BinarySink",
+						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
+							"type": "AzureBlobFSWriteSettings",
+							"copyBehavior": "FlattenHierarchy"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".csv"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['order_item_id']"
+								},
+								"sink": {
+									"name": "order_item_id"
+								}
+							},
+							{
+								"source": {
+									"path": "$['order_item_order_id']"
+								},
+								"sink": {
+									"name": "order_item_order_id"
+								}
+							},
+							{
+								"source": {
+									"path": "$['order_item_product_id']"
+								},
+								"sink": {
+									"name": "order_item_product_id"
+								}
+							},
+							{
+								"source": {
+									"path": "$['order_item_quantity']"
+								},
+								"sink": {
+									"name": "order_item_quantity"
+								}
+							},
+							{
+								"source": {
+									"path": "$['order_item_subtotal']"
+								},
+								"sink": {
+									"name": "order_item_subtotal"
+								}
+							},
+							{
+								"source": {
+									"path": "$['order_item_product_price']"
+								},
+								"sink": {
+									"name": "order_item_product_price"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "Binary1_ls",
+						"referenceName": "Json1_ds",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "Binary1_ls",
+						"referenceName": "DelimitedText1_ds",
 						"type": "DatasetReference"
 					}
 				]
